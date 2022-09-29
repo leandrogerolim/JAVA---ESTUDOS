@@ -12,13 +12,7 @@ import javax.persistence.Embeddable;
 @Data
 @Embeddable
 @NoArgsConstructor
-
-
-
-
 public class Endereco {
-
     private String cep;
-
     private String complemento;
 }

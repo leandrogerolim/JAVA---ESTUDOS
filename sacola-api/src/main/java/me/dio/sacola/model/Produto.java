@@ -12,21 +12,18 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Data
+@Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
-@Entity
 public class Produto {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    private double ValorUnitario;
+    private String nome;
+    private double valorUnitario;
     @Builder.Default
     private Boolean disponivel = true;
     @ManyToOne
     @JsonIgnore
     private Restaurante restaurante;
-
-
 }
