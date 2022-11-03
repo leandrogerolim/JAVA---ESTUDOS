@@ -34,22 +34,3 @@ public class Main {
                 System.out.println("Total de nós a esquerda: " + esquerda); }}
 
 
-        //B
-        public class No { private long id; private Object elemento; private No esq;
-            private No dir;
-            public No (long id, Object elemento, No esq, No dir) { this.id = id;
-                this.elemento = elemento; this.esq = esq; this.dir = dir; }
-            public void setId(long id) {  this.id = id; } public long getId() {
-                return this.id; }
-            public void setElemento(Object elemento) {  this.elemento = elemento; }
-            public Object getElemento() {  return elemento; }
-            public void setEsq(No esq) {  this.esq = esq; }
-            public No getEsq(){  return esq; }
-if (atual != null) { long e,d; e = calcAltura(atual.getEsq(),a)+1;
-                d = calcAltura(atual.getDir(),a)+1; if (e > d) { return a+e; } else {
-                    return a+d; }} return a; } private long calcEsq(No atual, long a) {
-            if (atual != null) { long e,d; e = calcEsq(atual.getEsq(),a)+1;
-                return a+e; } return a; } public long alturaArvore() { long a = 0; System.out.println(" ");
-            return calcAltura(raiz,a); }  public long totalEsquerda(){ long es = 0;
-            return calcEsq(raiz, es); }}
-
